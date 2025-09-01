@@ -14,7 +14,11 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Facturas
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Unity\Facturas\Facturas\
+=======
+build_property.ProjectDir = C:\Users\Alumno\Documents\GitHub\Facturas\Facturas\
+>>>>>>> origin/25/8
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

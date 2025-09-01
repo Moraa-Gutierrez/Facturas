@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Unity\\Facturas\\Facturas\\Facturas.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "C:\\Unity\\Facturas\\Facturas\\Facturas.csproj",
         "packagesPath": "C:\\Users\\gutie\\.nuget\\packages\\",
         "outputPath": "C:\\Unity\\Facturas\\Facturas\\obj\\",
+=======
+    "C:\\Users\\Alumno\\Documents\\GitHub\\Facturas\\Facturas\\Facturas.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Alumno\\Documents\\GitHub\\Facturas\\Facturas\\Facturas.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alumno\\Documents\\GitHub\\Facturas\\Facturas\\Facturas.csproj",
+        "projectName": "Facturas",
+        "projectPath": "C:\\Users\\Alumno\\Documents\\GitHub\\Facturas\\Facturas\\Facturas.csproj",
+        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alumno\\Documents\\GitHub\\Facturas\\Facturas\\obj\\",
+>>>>>>> origin/25/8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\gutie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +58,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -74,7 +88,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
