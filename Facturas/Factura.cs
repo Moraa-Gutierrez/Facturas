@@ -78,7 +78,7 @@ namespace Facturas
             DataTable tabla = GestorConexion.Instancia.ConsultarBD(consulta, parametros);
             factura.idFactura = int.Parse( tabla.Rows[0]["Id_Factura"].ToString());
             factura.nombre = (tabla.Rows[0]["nombre"].ToString());
-            factura.relleno = int.Parse(tabla.Rows[0]["relleno"].ToString());
+            factura.relleno = int.Parse(tabla.Rows[0]["relleno"].ToString()) == 1;
             factura.precio = int.Parse(tabla.Rows[0]["precio"].ToString());
             return factura;
         }
