@@ -15,7 +15,13 @@ namespace Facturas
         protected int idFactura;
         protected string nombre;
         protected bool relleno;
-        protected int precio;
+        protected float precio;
+
+
+        public int IdFactura { get { return idFactura; } private set { } }
+        public string Nombre { get { return nombre; }set { nombre = value; } }
+        public bool Relleno { get { return relleno; } set { relleno = value; } }
+        public float Precio { get { return precio; } set { precio = value; } }
 
         public static Factura TraerFactura(int idFactura)
         {
@@ -64,7 +70,7 @@ namespace Facturas
                 nuevaFactura.idFactura = int.Parse(fila["idFactura"].ToString());
                 nuevaFactura.nombre = fila["nombre"].ToString();
                 nuevaFactura.relleno = int.Parse(fila["relleno"].ToString()) == 1;
-                nuevaFactura.precio = int.Parse(fila["precio"].ToString());
+                nuevaFactura.precio = float.Parse(fila["precio"].ToString());
                 lista.Add(nuevaFactura);
             }
             return lista;
@@ -79,7 +85,7 @@ namespace Facturas
             factura.idFactura = int.Parse( tabla.Rows[0]["Id_Factura"].ToString());
             factura.nombre = (tabla.Rows[0]["nombre"].ToString());
             factura.relleno = int.Parse(tabla.Rows[0]["relleno"].ToString()) == 1;
-            factura.precio = int.Parse(tabla.Rows[0]["precio"].ToString());
+            factura.precio = float.Parse(tabla.Rows[0]["precio"].ToString());
             return factura;
         }
     

@@ -34,6 +34,7 @@
             Nombre = new DataGridViewTextBoxColumn();
             Relleno = new DataGridViewTextBoxColumn();
             Precio = new DataGridViewTextBoxColumn();
+            BtnAñadir = new Button();
             ((System.ComponentModel.ISupportInitialize)Dgv).BeginInit();
             SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             Dgv.Columns.AddRange(new DataGridViewColumn[] { Id_Factura, Nombre, Relleno, Precio });
             Dgv.EditMode = DataGridViewEditMode.EditOnF2;
             Dgv.Enabled = false;
-            Dgv.Location = new Point(246, 78);
+            Dgv.Location = new Point(272, 82);
             Dgv.Name = "Dgv";
             Dgv.Size = new Size(444, 275);
             Dgv.TabIndex = 1;
@@ -83,11 +84,22 @@
             Precio.HeaderText = "Precio";
             Precio.Name = "Precio";
             // 
+            // BtnAñadir
+            // 
+            BtnAñadir.Location = new Point(430, 402);
+            BtnAñadir.Name = "BtnAñadir";
+            BtnAñadir.Size = new Size(149, 23);
+            BtnAñadir.TabIndex = 2;
+            BtnAñadir.Text = "Añadir Factura";
+            BtnAñadir.UseVisualStyleBackColor = true;
+            BtnAñadir.Click += BtnAñadir_Click;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1045, 563);
+            Controls.Add(BtnAñadir);
             Controls.Add(Dgv);
             Controls.Add(LblTitulo);
             Margin = new Padding(3, 2, 3, 2);
@@ -106,5 +118,6 @@
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Relleno;
         private DataGridViewTextBoxColumn Precio;
+        private Button BtnAñadir;
     }
 }

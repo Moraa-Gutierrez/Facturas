@@ -6,5 +6,12 @@ namespace Facturas
         {
             InitializeComponent();
         }
+        FrmMain FrmAgregar;
+
+        private void BtnAñadir_Click(object sender, EventArgs e)
+        {
+            FrmAgregar.();
+            this.Hide();
+        }
     }
 }
