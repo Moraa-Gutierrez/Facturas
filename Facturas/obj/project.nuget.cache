@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "3clJp3Mrz4M=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Alumno\\Documents\\GitHub\\Facturas\\Facturas\\Facturas.csproj",
-=======
   "dgSpecHash": "I0NhhHeXbCM=",
   "success": true,
   "projectFilePath": "C:\\Users\\usuario\\Desktop\\Facturas\\Facturas\\Facturas.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\usuario\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.8\\microsoft.data.sqlite.core.9.0.8.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
