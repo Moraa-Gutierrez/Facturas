@@ -1,6 +1,6 @@
 ﻿namespace Facturas
 {
-    partial class FrmAgregar
+    partial class FrmAgregarFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             TxtNombre = new TextBox();
             BtnAgregar = new Button();
             ChkRelleno = new CheckBox();
+            BtnVolver = new Button();
             SuspendLayout();
             // 
             // LblNombre
@@ -87,9 +88,9 @@
             // BtnAgregar
             // 
             BtnAgregar.BackColor = Color.DarkGray;
-            BtnAgregar.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BtnAgregar.Font = new Font("MV Boli", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             BtnAgregar.ForeColor = SystemColors.ControlLightLight;
-            BtnAgregar.Location = new Point(296, 269);
+            BtnAgregar.Location = new Point(505, 269);
             BtnAgregar.Name = "BtnAgregar";
             BtnAgregar.Size = new Size(145, 43);
             BtnAgregar.TabIndex = 6;
@@ -108,12 +109,26 @@
             ChkRelleno.Text = "Relleno?";
             ChkRelleno.UseVisualStyleBackColor = true;
             // 
-            // FrmAgregar
+            // BtnVolver
+            // 
+            BtnVolver.BackColor = Color.DarkGray;
+            BtnVolver.Font = new Font("MV Boli", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnVolver.ForeColor = SystemColors.ControlLightLight;
+            BtnVolver.Location = new Point(187, 269);
+            BtnVolver.Name = "BtnVolver";
+            BtnVolver.Size = new Size(145, 43);
+            BtnVolver.TabIndex = 8;
+            BtnVolver.Text = "Volver";
+            BtnVolver.UseVisualStyleBackColor = false;
+            BtnVolver.Click += BtnVolver_Click;
+            // 
+            // FrmAgregarFactura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.CornflowerBlue;
+            BackColor = Color.SlateBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(BtnVolver);
             Controls.Add(ChkRelleno);
             Controls.Add(BtnAgregar);
             Controls.Add(TxtNombre);
@@ -121,7 +136,7 @@
             Controls.Add(LblPrecio);
             Controls.Add(LblRelleno);
             Controls.Add(LblNombre);
-            Name = "FrmAgregar";
+            Name = "FrmAgregarFactura";
             Text = "FormAgregar";
             ResumeLayout(false);
             PerformLayout();
@@ -136,5 +151,6 @@
         private TextBox TxtNombre;
         private Button BtnAgregar;
         private CheckBox ChkRelleno;
+        private Button BtnVolver;
     }
 }

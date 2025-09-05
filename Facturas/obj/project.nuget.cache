@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3clJp3Mrz4M=",
+  "dgSpecHash": "yESSWox9+YQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alumno\\Documents\\GitHub\\Facturas\\Facturas\\Facturas.csproj",
+  "projectFilePath": "C:\\Users\\Alumno\\Desktop\\Facturas\\Facturas\\Facturas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alumno\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.8\\microsoft.data.sqlite.core.9.0.8.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",

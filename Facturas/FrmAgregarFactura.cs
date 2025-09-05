@@ -10,18 +10,18 @@ using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 namespace Facturas
 {
-    public partial class FrmAgregar : Form
+    public partial class FrmAgregarFactura : Form
     {
-
-        public FrmAgregar()
+        FrmInicio formInicio;
+        public FrmAgregarFactura(FrmInicio formInicio)
         {
             InitializeComponent();
-           
+            this.formInicio = formInicio;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-           
+
             Factura agregarFactura = new Factura();// nueva instancia de memoria de la clase Factura
             agregarFactura.Nombre = TxtNombre.Text;
             agregarFactura.Relleno = ChkRelleno.Checked;
@@ -32,6 +32,13 @@ namespace Facturas
         public void MostrarAgregar()// prepara al formulario para agregar
         {
             this.Show();
+            formInicio.Hide();
+        }
+
+        private void BtnVolver_Click(object sender, EventArgs e)
+        {
+            formInicio.Show();
+            this.Hide();
         }
     }
 }
