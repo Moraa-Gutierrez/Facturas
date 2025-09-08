@@ -31,7 +31,7 @@ namespace Facturas
         }
         public void InsertarEnBD()
         {
-            string consulta = "INSERT INTO factura (nombre, relleno, precio) VALUES (@nombre, @relleno, @precio)";
+            string consulta = "INSERT INTO facturas (nombre, relleno, precio) VALUES (@nombre, @relleno, @precio)";
              List<SqliteParameter> parametros = new List<SqliteParameter>();
             parametros.Add(new SqliteParameter("@nombre",nombre));
             parametros.Add(new SqliteParameter("@relleno", relleno ? 1 : 0));
@@ -40,7 +40,7 @@ namespace Facturas
         }
         public void ModificarEnBD()
         {
-            string consulta = "UPDATE factura SET @nombre = nombre, @relleno = relleno, @precio = precio WHERE idFactura = @idFactura";
+            string consulta = "UPDATE facturas SET @nombre = nombre, @relleno = relleno, @precio = precio WHERE idFactura = @idFactura";
             List<SqliteParameter> parametros = new List<SqliteParameter>();
             parametros.Add(new SqliteParameter("@nombre", nombre));
             parametros.Add(new SqliteParameter("@relleno", relleno ? 1 : 0));
@@ -50,7 +50,7 @@ namespace Facturas
         }
         public void EliminarEnBD()
         {   
-            string consulta = "DELETE FROM factura WHERE idFactura = @idFactura";
+            string consulta = "DELETE FROM facturas WHERE idFactura = @idFactura";
             List<SqliteParameter> parametros = new List<SqliteParameter>();
             parametros.Add(new SqliteParameter("@nombre", nombre));
             parametros.Add(new SqliteParameter("@relleno", relleno ? 1: 0));
@@ -62,12 +62,12 @@ namespace Facturas
         public static List<Factura> TraerTodos()
         {
             List <Factura> lista=new List<Factura>();
-            string consulta = "SELECT * FROM tabla";
+            string consulta = "SELECT * FROM facturas";
             DataTable tabla = GestorConexion.Instancia.ConsultarBD(consulta, null);
             foreach (DataRow fila in tabla.Rows)
             {
                 Factura nuevaFactura = new Factura();
-                nuevaFactura.idFactura = int.Parse(fila["idFactura"].ToString());
+                nuevaFactura.idFactura = int.Parse(fila["Id_Factura"].ToString());
                 nuevaFactura.nombre = fila["nombre"].ToString();
                 nuevaFactura.relleno = int.Parse(fila["relleno"].ToString()) == 1;
                 nuevaFactura.precio = float.Parse(fila["precio"].ToString());

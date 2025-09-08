@@ -14,7 +14,7 @@ namespace Facturas
     {
         private GestorConexion()
         {
-            conexion = new SqliteConnection("Datasource = fatcuras.db");
+            conexion = new SqliteConnection("Datasource = facturas.db");
         }
 
         private static GestorConexion _instancia;

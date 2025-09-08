@@ -27,12 +27,14 @@ namespace Facturas
             agregarFactura.Relleno = ChkRelleno.Checked;
             agregarFactura.Precio = float.Parse(TxtPrecio.Text);
             agregarFactura.InsertarEnBD();// agregar factura a la base de datos,pasamos factura y conexion
-            this.Hide();// se esconde
+            formInicio.ActualizarDataGrid(); //se llama a la instancia de la clase (formInicio) y a su instancia actualizardatagrid
+            this.Hide();
+            formInicio.Show();
         }
         public void MostrarAgregar()// prepara al formulario para agregar
         {
             this.Show();
-            formInicio.Hide();
+           formInicio.Hide();
         }
 
         private void BtnVolver_Click(object sender, EventArgs e)
