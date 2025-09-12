@@ -23,12 +23,6 @@ namespace Facturas
         public bool Relleno { get { return relleno; } set { relleno = value; } }
         public float Precio { get { return precio; } set { precio = value; } }
 
-        public static Factura TraerFactura(int idFactura)
-        {
-            Factura factura = new Factura();
-
-            return factura;
-        }
         public void InsertarEnBD()
         {
             string consulta = "INSERT INTO facturas (nombre, relleno, precio) VALUES (@nombre, @relleno, @precio)";
@@ -50,11 +44,8 @@ namespace Facturas
         }
         public void EliminarEnBD()
         {   
-            string consulta = "DELETE FROM facturas WHERE idFactura = @idFactura";
+            string consulta = "DELETE FROM facturas WHERE Id_Factura = @idFactura";
             List<SqliteParameter> parametros = new List<SqliteParameter>();
-            parametros.Add(new SqliteParameter("@nombre", nombre));
-            parametros.Add(new SqliteParameter("@relleno", relleno ? 1: 0));
-            parametros.Add(new SqliteParameter("@precio", precio));
             parametros.Add(new SqliteParameter("@idFactura", idFactura));
             GestorConexion.Instancia.ModificarBD(consulta, parametros);
 
@@ -79,10 +70,10 @@ namespace Facturas
         {
             Factura factura = new Factura();   
             List<SqliteParameter> parametros = new List<SqliteParameter>();
-            string consulta = "SELECT FROM tabla WHERE idFactura = @idFactura";
+            string consulta = "SELECT * FROM facturas WHERE Id_Factura = @idFactura";
             parametros.Add(new SqliteParameter("@idFactura", idFactura));
             DataTable tabla = GestorConexion.Instancia.ConsultarBD(consulta, parametros);
-            factura.idFactura = int.Parse( tabla.Rows[0]["Id_Factura"].ToString());
+            factura.idFactura = int.Parse(tabla.Rows[0]["Id_Factura"].ToString());
             factura.nombre = (tabla.Rows[0]["nombre"].ToString());
             factura.relleno = int.Parse(tabla.Rows[0]["relleno"].ToString()) == 1;
             factura.precio = float.Parse(tabla.Rows[0]["precio"].ToString());
