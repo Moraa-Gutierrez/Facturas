@@ -34,7 +34,7 @@ namespace Facturas
         }
         public void ModificarEnBD()
         {
-            string consulta = "UPDATE facturas SET @nombre = nombre, @relleno = relleno, @precio = precio WHERE idFactura = @idFactura";
+            string consulta = "UPDATE facturas SET nombre = @nombre, relleno = @relleno, precio = @precio WHERE Id_Factura = @idFactura";
             List<SqliteParameter> parametros = new List<SqliteParameter>();
             parametros.Add(new SqliteParameter("@nombre", nombre));
             parametros.Add(new SqliteParameter("@relleno", relleno ? 1 : 0));

@@ -107,7 +107,7 @@
             ChkRelleno.Font = new Font("Sitka Small", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             ChkRelleno.Location = new Point(340, 152);
             ChkRelleno.Name = "ChkRelleno";
-            ChkRelleno.Size = new Size(117, 32);
+            ChkRelleno.Size = new Size(116, 32);
             ChkRelleno.TabIndex = 7;
             ChkRelleno.Text = "Relleno?";
             ChkRelleno.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientInactiveCaption;
+            BackColor = Color.BlueViolet;
             ClientSize = new Size(800, 450);
             Controls.Add(BtnVolver);
             Controls.Add(ChkRelleno);

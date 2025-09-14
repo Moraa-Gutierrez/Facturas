@@ -38,9 +38,13 @@ namespace Facturas
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
+            facturamodificar.Nombre = TxtNombreEditar.Text;
+            facturamodificar.Relleno = ChkEditarRelleno.Checked;
+            facturamodificar.Precio = float.Parse(TxtPrecioEditar.Text);
             facturamodificar.ModificarEnBD();
             formInicio.Show();
             this.Hide();
+            formInicio.ActualizarDataGrid();
         }
     }
 }
