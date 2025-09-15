@@ -14,6 +14,7 @@ namespace Facturas
             ActualizarDataGrid();
         }
         FrmAgregarFactura formAgregar;
+        FrmEditarFactura formEditar;
 
         public FrmAgregarFactura FormAgregar
         {
@@ -25,6 +26,16 @@ namespace Facturas
                 return formAgregar;
             }
         }
+        public FrmEditarFactura FormEditar
+        {
+            get
+            {
+                if (formEditar == null)
+                    formEditar = new FrmEditarFactura(this);
+
+                return formEditar;
+            }
+        }
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             FormAgregar.Show();
@@ -33,22 +44,35 @@ namespace Facturas
 
         public void ActualizarDataGrid()
         {
+            DgvFactura.Rows.Clear();
             listaFactura = Factura.TraerTodos();
+
             if (listaFactura.Count <= 0)
             {
                 return;
             }
-            DgvFactura.Rows.Clear();
+
             foreach (Factura factura in listaFactura)
                 DgvFactura.Rows.Add(factura.IdFactura, factura.Nombre, factura.Relleno, factura.Precio);
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            Factura.TraerFactura(){
+            if (DgvFactura.SelectedRows.Count <= 0)
+                return;
+            int idSeleccionado = (int)DgvFactura.SelectedRows[0].Cells["Id_Factura"].Value;
+            Factura facturaAEliminar = Factura.TraerUno(idSeleccionado);
 
-            }
-            .EliminarEnBD();
+            facturaAEliminar.EliminarEnBD();
+            ActualizarDataGrid();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            int idSeleccionado = (int)DgvFactura.SelectedRows[0].Cells["Id_Factura"].Value;
+            Factura facturaeditar = Factura.TraerUno(idSeleccionado);
+            FormEditar.MostrarEditar(facturaeditar);
+            this.Hide();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Facturas
         public void MostrarAgregar()// prepara al formulario para agregar
         {
             this.Show();
-           formInicio.Hide();
+            formInicio.Hide();
         }
 
         private void BtnVolver_Click(object sender, EventArgs e)
@@ -42,5 +42,7 @@ namespace Facturas
             formInicio.Show();
             this.Hide();
         }
+
+
     }
 }

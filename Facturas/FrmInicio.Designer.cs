@@ -69,18 +69,20 @@
             // 
             DgvFactura.AllowUserToAddRows = false;
             DgvFactura.AllowUserToDeleteRows = false;
-            DgvFactura.BackgroundColor = SystemColors.Info;
+            DgvFactura.BackgroundColor = Color.FromArgb(192, 192, 255);
             DgvFactura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgvFactura.Columns.AddRange(new DataGridViewColumn[] { Id_Factura, Nombre, Relleno, Precio });
             DgvFactura.Location = new Point(173, 84);
+            DgvFactura.MultiSelect = false;
             DgvFactura.Name = "DgvFactura";
             DgvFactura.ReadOnly = true;
+            DgvFactura.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DgvFactura.Size = new Size(343, 150);
             DgvFactura.TabIndex = 1;
             // 
             // Id_Factura
             // 
-            Id_Factura.HeaderText = "Id Factura";
+            Id_Factura.HeaderText = "Id_Factura";
             Id_Factura.Name = "Id_Factura";
             Id_Factura.ReadOnly = true;
             Id_Factura.Visible = false;
@@ -113,6 +115,7 @@
             BtnEditar.TabIndex = 2;
             BtnEditar.Text = "Editar Factura";
             BtnEditar.UseVisualStyleBackColor = false;
+            BtnEditar.Click += BtnEditar_Click;
             // 
             // BtnEliminar
             // 
@@ -146,11 +149,11 @@
         private Button BtnAñadir;
         private Button BtnAgregar;
         private DataGridView DgvFactura;
+        private Button BtnEditar;
+        private Button BtnEliminar;
         private DataGridViewTextBoxColumn Id_Factura;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Relleno;
         private DataGridViewTextBoxColumn Precio;
-        private Button BtnEditar;
-        private Button BtnEliminar;
     }
 }
